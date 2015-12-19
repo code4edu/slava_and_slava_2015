@@ -3,7 +3,10 @@
 
 if(!defined("SITE_POEDIM_SECURE"))
     die("Access denied");
-
+?>
+    <section id="catalog">
+        <div class="container">
+<?
 $sql = "SELECT * FROM `categories`";
 $result = mysql_query($sql);
 
@@ -40,3 +43,5 @@ while ($row = mysql_fetch_array($result))
 	<?
 }
 ?>
+		</div>
+	</section>
