@@ -48,12 +48,12 @@ while ($category = mysql_fetch_array($result))
 ?>
             </ul>
         </div>
+        <div id="total">Итого: <span class="total"><?=$cart_sum;?></span> руб.</div>
     </section>
 <?
     if ($cart_sum)
     {
 ?>
-    <div id="total">Итого: <span class="total"><?=$cart_sum;?></span> руб.</div>
     <footer><a href="/?page=confirm">Оплатить</a></footer>
 <?
     }

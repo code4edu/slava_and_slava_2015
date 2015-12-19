@@ -60,7 +60,7 @@ while ($category = mysql_fetch_array($result))
 			<input type="hidden" name="targets" value="заказ номер №<?=$order['id'];?>">
 			<input type="hidden" name="sum" value="<?=$cart_sum;?>" data-type="number">
 			<input type="hidden" name="paymentType" value="AC"/>
-			<input id="specialSubmit" type="submit" value="ОПЛАТИТЬ" />
+			<noscript><input id="specialSubmit" type="submit" value="ОПЛАТИТЬ" /></noscript>
 		</form>
 	</section>
 
