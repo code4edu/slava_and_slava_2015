@@ -21,14 +21,14 @@ while ($row = mysql_fetch_array($result))
 	{
 		?>
                     <li>
-                        <div class="img"><img src="<?=$item['img'];?>" alt="<?=$item['name'];?>" /></div>
+                        <div class="img"><img src="<?=$iteam['img'];?>" alt="<?=$iteam['name'];?>" /></div>
                         <div class="about">
-                            <div class="name"><?=$item['name'];?></div>
-                            <div class="about"><?=$item['description'];?></div>
+                            <div class="name"><?=$iteam['name'];?></div>
+                            <div class="about"><?=$iteam['description'];?></div>
                         </div>
                         <div class="add">
-                            <div class="price"><?=$item['price'];?> руб.</div>
-                            <div class="button" rel="<?=$item['id'];?>">В корзину</div>
+                            <div class="price"><?=$iteam['price'];?> руб.</div>
+                            <div class="button" rel="<?=$iteam['id'];?>">В корзину</div>
                         </div>
                     </li>
 		<?
