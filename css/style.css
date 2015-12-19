@@ -138,6 +138,10 @@ section#catalog .container .category .list li .add .button{
     color: #fff;
     font-size: 17px;
 }
+section#catalog .container .category .list li .add .button a{
+    color: #fff;
+    text-decoration: none;
+}
 
 section#catalog .container .category .list li .add .button img{
     width: 20px;
