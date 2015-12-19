@@ -2,12 +2,27 @@ function getCookie(name) {
   var matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
   ));
-  return matches ? decodeURIComponent(matches[1]) : undefined;
+  return matches ? decodeURIComponent(matches[1]) : 0;
 }
-function setCookie (name, value, expires, path, domain, secure) {
-	document.cookie = name + "=" + escape(value) +
-		((expires) ? "; expires=" + expires : "") +
-		((path) ? "; path=" + path : "") +
-		((domain) ? "; domain=poedim.csit.pro") +
-		((secure) ? "; secure" : "");
+function setCookie (name, value) {
+	var now = new Date();
+	var time = now.getTime();
+	var expireTime = time + 12 * 36000;
+	now.setTime(expireTime);
+	document.cookie = name + "=" + escape(value) + "; expires= " + now.toGMTString() + "; path=/; domain=poedim.csit.pro";
 }
+
+$(document).ready(function() {
+	$('.button').bind("click", function(e){
+		var id = $(this).attr('rel');
+		setCookie('food-' + id, getCookie('food-' + id) + 1);
+	});
+
+	$('a[href*=#]').bind("click", function(e){
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 1000);
+		e.preventDefault();
+	});
+});
