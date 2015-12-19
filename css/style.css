@@ -87,9 +87,13 @@ section#catalog .container .category .header{
     margin-right: 10px;
     padding-top: 20px;
     text-align: left;
-    background: url("../img/arrowUp.png") no-repeat right 23px;
+    background: url("../img/arrowDown.png") no-repeat right 23px;
     background-size: 35px;
     cursor: pointer;
+}
+
+section#catalog .container .category .header.select{
+    background: url("../img/arrowUp.png") no-repeat right 23px;
 }
 section#catalog .container .category .list li{
     border-bottom: 1px solid #c5c5c5;
@@ -166,10 +170,7 @@ section#catalog .container .category ul{
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    margin-left: -161px;
+    margin: auto;
     background: #e67e22;
     width: 322px;
     text-align: center;
@@ -241,6 +242,15 @@ section#catalog .container .cart .price{
     width: 280px;
 }
 .price .value{
+    font-weight: bold;
+}
+
+#total{
+    color: #27ae60;
+    text-align: center;
+    margin-top: 15px;
+}
+#total .total{
     font-weight: bold;
 }
 
