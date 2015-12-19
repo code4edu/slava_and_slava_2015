@@ -53,6 +53,8 @@ while ($category = mysql_fetch_array($result))
     else
     {
 ?>
-    <div id="total">Вашга корзина пуста <br/> <a href="/">закажите что-нибудь у нас;)</a></div>
+    <div id="total">Ваша корзина пуста <br/> <a href="/">закажите что-нибудь у нас;)</a></div>
 <?        
     }
+?>
+    <div id="confim"><a href="/?page=confirm">Оплатить</a></div>

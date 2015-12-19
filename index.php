@@ -14,6 +14,10 @@ switch ($page)
 	{
 	include ('blocks/template/header_cart.php');
 	include ('blocks/list_cart.php');
+	}
+	break;
+	case 'confirm':
+	{
 	include ('blocks/pay.php');
 	}
 	break;
