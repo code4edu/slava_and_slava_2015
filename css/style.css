@@ -32,16 +32,49 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: #FFF;
+    background: #eee;
     font-family: "PTSansRegular", PT Sans, Helvetica, Arial, sans-sherif;
     font-size: 20px;
 }
 
 header {
+    background: url("../img/headerBg.png") no-repeat fixed center center /cover;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+header img{
+    margin-top: 80px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+header p{
+    width: 250px;
+    margin: auto;
+    margin-bottom: 60px;
 }
 
 section#catalog {
+    width: 320px;
+    background: #fff;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+    border-right: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
 }
 
 footer {
+    background: #e67e22;
+    width: 322px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    height: 40px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
 }
