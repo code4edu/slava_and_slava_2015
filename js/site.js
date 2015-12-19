@@ -9,7 +9,7 @@ function setCookie (name, value) {
 	var now = new Date();
 	var expireTime = now.getTime() + 12 * 36000;
 	now.setTime(expireTime);
-	document.cookie = name + "=" + escape(value) + "; expires= " + now.toGMTString() + "; domain=poedim.csit.pro";
+	document.cookie = name + "=" + escape(value) + "; expires= " + now.toGMTString() + ";";
 }
 
 function deleteCookie(name) {
@@ -19,6 +19,16 @@ function deleteCookie(name) {
 }
 
 $(document).ready(function() {
+
+	$('.list').hide();
+
+	$('.header').bind("click", function(e){
+		$('.header').removeClass('select');
+		$(this).addClass('select');
+		$('.list').hide();
+		$(this).closest(".category").children('.list').show();
+	});
+
 	$('.button').bind("click", function(e){
 		var id = $(this).attr('rel');
 		var category = $(this).closest('ul').attr('rel');

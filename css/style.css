@@ -94,6 +94,7 @@ section#catalog .container .category .header{
 
 section#catalog .container .category .header.select{
     background: url("../img/arrowUp.png") no-repeat right 23px;
+    background-size: 35px;
 }
 section#catalog .container .category .list li{
     border-bottom: 1px solid #c5c5c5;

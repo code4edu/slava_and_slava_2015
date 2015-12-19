@@ -8,7 +8,9 @@ $sql = "SELECT * FROM `categories`";
 $result = mysql_query($sql);
 
 ?>
-    <ul class="cart">
+    <section id="catalog">
+        <div class="container">
+            <ul class="cart">
 <?
 $cart_sum = 0;
 while ($category = mysql_fetch_array($result))
@@ -22,9 +24,10 @@ while ($category = mysql_fetch_array($result))
         {
             $count = $_COOKIE['food-'.$category['id'].'-'.$iteam['id']];
             $price = $count * $iteam['price'];
-            $cart_sum += $price;
             if (!$count || $count == 'NaN')
                 continue;
+
+            $cart_sum += $price;
             ?>
             <li rel="<?=$category['id'];?>">
                 <div class="about">
@@ -37,17 +40,21 @@ while ($category = mysql_fetch_array($result))
                 <div class="price">
                     <span class="value"><?=$price;?></span> руб.
                 </div>
+            </li>
             <?
         }
     }
 }
 ?>
-    </ul>
+            </ul>
+        </div>
+    </section>
 <?
     if ($cart_sum)
     {
 ?>
-    <div id="total">Итого: <span class="total"><?=$cart_sum;?></span> руб.</p>
+    <div id="total">Итого: <span class="total"><?=$cart_sum;?></span> руб.</div>
+    <footer><a href="/?page=confirm">Оплатить</a></footer>
 <?
     }
     else
@@ -57,4 +64,3 @@ while ($category = mysql_fetch_array($result))
 <?        
     }
 ?>
-    <div id="confim"><a href="/?page=confirm">Оплатить</a></div>
