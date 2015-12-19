@@ -57,11 +57,98 @@ header p{
 section#catalog {
     width: 320px;
     background: #fff;
-    height: 500px;
     text-align: center;
     margin: auto;
     border-right: 1px solid #bfbfbf;
     border-left: 1px solid #bfbfbf;
+    padding-bottom: 20px;
+}
+
+section#catalog .container .category{
+    border-bottom: 1px solid #c5c5c5;
+    border-style: dashed;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 30px;
+    width: 300px;
+    margin: auto;
+}
+section#catalog .container .category .header{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    text-align: left;
+    background: url("../img/arrowUp.png") no-repeat right 23px;
+    background-size: 35px;
+}
+section#catalog .container .category .list li{
+    border-bottom: 1px solid #c5c5c5;
+    border-style: dashed;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 30px;
+}
+section#catalog .container .category .list li:last-child{
+    border: none;
+    padding-bottom: 0px;
+}
+section#catalog .container .category .list li img{
+    width: 100px;
+    float: left;
+}
+
+section#catalog .container .category .list li .about .name{
+    font-size: 15px;
+    text-align: justify;
+}
+
+section#catalog .container .category .list li .about{
+    margin: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+section#catalog .container .category .list li .about .about{
+    margin-top: 5px;
+    font-size: 13px;
+    text-align: justify;
+    color: #4e4e4e;
+
+}
+section#catalog .container .category .list li .add{
+    overflow: hidden;
+    margin-left: 25px;
+}
+
+section#catalog .container .category .list li .add .price{
+    float: left;
+    padding-top: 3px;
+}
+
+section#catalog .container .category .list li .add .button{
+    background: #27ae60;
+    margin-left: 100px;
+    margin-right: 10px;
+    height: 30px;
+    padding-top: 6px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+}
+
+section#catalog .container .category .list li .add .button img{
+    width: 20px;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+section#catalog .container .category ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 footer {
@@ -76,6 +163,10 @@ footer a{
     color: #fff;
     text-decoration: none;
 }
+.buyImg{
+    width: 20px;
+}
+
 
 @media all and (min-width: 980px) {
 }
