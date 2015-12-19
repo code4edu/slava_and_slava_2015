@@ -4,6 +4,7 @@ function getCookie(name) {
   ));
   return matches ? decodeURIComponent(matches[1]) : 0;
 }
+
 function setCookie (name, value) {
 	var now = new Date();
 	var time = now.getTime();
@@ -15,7 +16,8 @@ function setCookie (name, value) {
 $(document).ready(function() {
 	$('.button').bind("click", function(e){
 		var id = $(this).attr('rel');
-		setCookie('food-' + id, parseInt(getCookie('food-' + id)) + 1);
+		var category = $(this).closest('ul').attr('rel');
+		setCookie('food-' + category + '-' + id, parseInt(getCookie('food-' + category + '-' + id)) + 1);
 	});
 
 	$('a[href*=#]').bind("click", function(e){
