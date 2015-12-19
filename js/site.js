@@ -15,7 +15,7 @@ function setCookie (name, value) {
 $(document).ready(function() {
 	$('.button').bind("click", function(e){
 		var id = $(this).attr('rel');
-		setCookie('food-' + id, getCookie('food-' + id) + 1);
+		setCookie('food-' + id, parseInt(getCookie('food-' + id)) + 1);
 	});
 
 	$('a[href*=#]').bind("click", function(e){
