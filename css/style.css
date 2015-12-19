@@ -89,6 +89,7 @@ section#catalog .container .category .header{
     text-align: left;
     background: url("../img/arrowUp.png") no-repeat right 23px;
     background-size: 35px;
+    cursor: pointer;
 }
 section#catalog .container .category .list li{
     border-bottom: 1px solid #c5c5c5;
@@ -110,7 +111,7 @@ section#catalog .container .category .list li img{
 section#catalog .container .category .list li .about .name{
     font-size: 15px;
     text-align: justify;
-    cursor: pointer;
+    
 }
 
 section#catalog .container .category .list li .about{
@@ -165,11 +166,14 @@ section#catalog .container .category ul{
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -161px;
     background: #e67e22;
     width: 322px;
     text-align: center;
     height: 40px;
-    margin: auto;
     padding-top: 15px;
 }
 footer a{
