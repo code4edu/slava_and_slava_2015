@@ -10,7 +10,7 @@ $result = mysql_query($sql);
 ?>
     <ul class="cart">
 <?
-
+var_dump($_COOKIE);
 while ($category = mysql_fetch_array($result))
 {
     $sql = "SELECT * FROM `food` WHERE `category` = '".$category['id']."'";
@@ -18,6 +18,7 @@ while ($category = mysql_fetch_array($result))
 
     while ($iteam = mysql_fetch_array($res)) 
     {
+        echo $_COOKIE['food-'.$category['id'].'-'.$iteam['id']];
         if (isset($_COOKIE['food-'.$category['id'].'-'.$iteam['id']]))
         {
             $count = $_COOKIE['food-'.$category['id'].'-'.$iteam['id']];

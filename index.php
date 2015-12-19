@@ -12,7 +12,8 @@ switch ($page)
 {
 	case 'cart':
 	{
-
+	include ('blocks/template/header_cart.php');
+	include ('blocks/list_cart.php');
 	}
 	break;
 	default:

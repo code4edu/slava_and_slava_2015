@@ -10,7 +10,7 @@ function setCookie (name, value) {
 	var time = now.getTime();
 	var expireTime = time + 12 * 36000;
 	now.setTime(expireTime);
-	document.cookie = name + "=" + escape(value) + "; expires= " + now.toGMTString() + "; path=/; domain=poedim.csit.pro";
+	document.cookie = name + "=" + escape(value) + "; expires= " + now.toGMTString() + "; domain=poedim.csit.pro";
 }
 
 $(document).ready(function() {
