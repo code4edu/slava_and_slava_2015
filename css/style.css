@@ -72,6 +72,10 @@ footer {
     margin: auto;
     padding-top: 15px;
 }
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
 
 @media all and (min-width: 980px) {
 }
@@ -85,8 +89,4 @@ footer {
     height: 40px;
     padding-top: 15px;
     margin-bottom: 0px;
-}
-footer a{
-    color: #fff;
-    text-decoration: none;
 }
