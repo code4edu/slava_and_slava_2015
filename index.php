@@ -14,6 +14,7 @@ switch ($page)
 	{
 	include ('blocks/template/header_cart.php');
 	include ('blocks/list_cart.php');
+	include ('blocks/pay.php');
 	}
 	break;
 	default:

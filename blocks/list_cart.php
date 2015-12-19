@@ -10,7 +10,7 @@ $result = mysql_query($sql);
 ?>
     <ul class="cart">
 <?
-var_dump($_COOKIE);
+$cart_sum = 0;
 while ($category = mysql_fetch_array($result))
 {
     $sql = "SELECT * FROM `food` WHERE `category` = '".$category['id']."'";
@@ -18,22 +18,22 @@ while ($category = mysql_fetch_array($result))
 
     while ($iteam = mysql_fetch_array($res)) 
     {
-        echo $_COOKIE['food-'.$category['id'].'-'.$iteam['id']];
         if (isset($_COOKIE['food-'.$category['id'].'-'.$iteam['id']]))
         {
             $count = $_COOKIE['food-'.$category['id'].'-'.$iteam['id']];
+            $price = $count * $iteam['price'];
+            $cart_sum += $price;
             ?>
             <li rel="<?=$category['id'];?>">
                 <div class="about">
-                    <div class="name"><?=$iteam['name'];?></div>
+                    <div class="name" rel="<?=$iteam['price'];?>"><?=$iteam['name'];?></div>
                     <div class="count"><?=$count;?></div>
                     <div class="change" rel="<?=$iteam['id'];?>">
-                        <div class="plus"></div>
-                        <div class="minus"></div>
+                        <span class="plus">+</span> | <span class="minus">-</span>
                     </div>
                 </div>
                 <div class="price">
-                    <span class="value"><?=$count * $iteam['price'];?></span> руб.
+                    <span class="value"><?=$price;?></span> руб.
                 </div>
             <?
         }

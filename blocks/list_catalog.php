@@ -31,7 +31,7 @@ while ($row = mysql_fetch_array($result))
                         </div>
                         <div class="add">
                             <div class="price"><?=$iteam['price'];?> руб.</div>
-                            <div class="button" rel="<?=$iteam['id'];?>">В корзину</div>
+                            <div class="button" rel="<?=$iteam['id'];?>"><img src="img/cart.png"/>В корзину</div>
                         </div>
                     </li>
 		<?
