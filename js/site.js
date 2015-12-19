@@ -28,18 +28,22 @@ $(document).ready(function() {
 	$('.plus').bind("click", function(e){
 		var id = $(this).closest('.change').attr('rel');
 		var category = $(this).closest('li').attr('rel');
-		var price = $(this).closest('.name').attr('rel');
+		var price = parseInt($(this).closest('.about').children('.name').attr('rel'));
 		var count = parseInt(getCookie('food-' + category + '-' + id)) + 1;
 		setCookie('food-' + category + '-' + id, count);
 
-		$(this).closest('.count').html(count);
-		$(this).closest('.value').html(count * price);
+		$(this).closest('.about').children('.count').html(count);
+		$(this).closest('li').children('.price').children('.value').text(count * price);
+
+		var total = parseInt($("#total .total").text()) + price;
+
+		$("#total .total").text(total);
 	});
 
 	$('.minus').bind("click", function(e){
 		var id = $(this).closest('.change').attr('rel');
 		var category = $(this).closest('li').attr('rel');
-		var price = $(this).closest('.name').attr('rel');
+		var price = parseInt($(this).closest('.about').children('.name').attr('rel'));
 		var count = parseInt(getCookie('food-' + category + '-' + id)) - 1;
 
 		if (count <= 0)
@@ -47,12 +51,19 @@ $(document).ready(function() {
 			deleteCookie('food-' + category + '-' + id);
 			$(this).closest('li').hide();
 			return;
-		}	
+		}
 
 		setCookie('food-' + category + '-' + id, count);
 
-		$(this).closest('.count').html(count);
-		$(this).closest('.value').html(count * price);
+		$(this).closest('.about').children('.count').html(count);
+		$(this).closest('li').children('.price').children('.value').text(count * price);
+
+		var total = parseInt($("#total .total").text()) - price;
+
+		$("#total .total").text(total);
+
+		if (total <= 0)
+			$("#total .total").text('0');
 	});
 
 	$('a[href*=#]').bind("click", function(e){

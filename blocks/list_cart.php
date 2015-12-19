@@ -23,6 +23,8 @@ while ($category = mysql_fetch_array($result))
             $count = $_COOKIE['food-'.$category['id'].'-'.$iteam['id']];
             $price = $count * $iteam['price'];
             $cart_sum += $price;
+            if (!$count || $count == 'NaN')
+                continue;
             ?>
             <li rel="<?=$category['id'];?>">
                 <div class="about">
@@ -42,3 +44,15 @@ while ($category = mysql_fetch_array($result))
 ?>
     </ul>
 <?
+    if ($cart_sum)
+    {
+?>
+    <div id="total">Итого: <span class="total"><?=$cart_sum;?></span> руб.</p>
+<?
+    }
+    else
+    {
+?>
+    <div id="total">Вашга корзина пуста <br/> <a href="/">закажите что-нибудь у нас;)</a></div>
+<?        
+    }

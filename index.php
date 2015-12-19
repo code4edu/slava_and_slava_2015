@@ -20,7 +20,8 @@ switch ($page)
 	default:
 	{
 	include ('blocks/template/header_index.php');
-	include ('blocks/list_catalog.php');		
+	include ('blocks/list_catalog.php');	
+	include ('blocks/index_foot.php');		
 	}
 }
 
