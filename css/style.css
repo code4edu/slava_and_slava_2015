@@ -43,6 +43,12 @@ header {
     color: #fff;
     overflow: hidden;
 }
+.headerCart {
+    background: url("../img/cartBg.png") no-repeat fixed center center /cover;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
 header img{
     margin-top: 80px;
     width: 300px;
@@ -62,6 +68,7 @@ section#catalog {
     border-right: 1px solid #bfbfbf;
     border-left: 1px solid #bfbfbf;
     padding-bottom: 20px;
+
 }
 
 section#catalog .container .category{
@@ -103,6 +110,7 @@ section#catalog .container .category .list li img{
 section#catalog .container .category .list li .about .name{
     font-size: 15px;
     text-align: justify;
+    cursor: pointer;
 }
 
 section#catalog .container .category .list li .about{
@@ -137,6 +145,7 @@ section#catalog .container .category .list li .add .button{
     border-radius: 5px;
     color: #fff;
     font-size: 17px;
+    cursor: pointer;
 }
 section#catalog .container .category .list li .add .button a{
     color: #fff;
@@ -171,6 +180,29 @@ footer a{
     width: 20px;
 }
 
+.cart{
+    list-style: none;
+    margin: auto;
+    margin: 0px;
+    padding: 0px;
+}
+section#catalog .container .cart .about{
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+section#catalog .container .cart .about .name{
+    font-size: 15px;
+    float: left;
+}
+section#catalog .container .cart .about .count{
+    font-size: 15px;
+    float: left;
+    margin-left: 20px;
+}
+section#catalog .container .cart .about .change{
+    font-size: 15px;
+}
 
 @media all and (min-width: 980px) {
 }

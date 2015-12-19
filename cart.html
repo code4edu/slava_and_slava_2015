@@ -2,7 +2,7 @@
 <html lang="ru-Ru">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Поедим</title>
+    <title>Поедим | Оформление заказа</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Поедим">
     <meta name="description" content="Поедим">
@@ -14,22 +14,22 @@
     <script src="/js/site.js" type="text/javascript"></script>
 </head>
 <body>
-    <header class="cart">
-        <div class="containder">
+    <header class="headerCart">
+        <div class="container">
             <img src="img/headerLogo.png" />
-            <p>Закажи еду в два клика и забери в столовой без очереди!</p>
+            <p>Оформление заказа</p>
         </div>
     </header>
     
     <section id="catalog">
-        <div class="containder">
+        <div class="container">
             <ul class="cart">
                 <li rel="1">
                     <div class="about">
-                        <div class="name">Цезарь</div>
+                        <div class="name">Салат "Цезарь"</div>
                         <div class="count">1</div>
                         <div class="change" rel="1">
-                            <div class="plus">+</div>|<div class="minus">-</div>
+                            <span class="plus">+</div>|<span class="minus">-</div>
                         </div>
                     </div>
                     <div class="price">
@@ -41,7 +41,7 @@
                         <div class="name">Крабовый</div>
                         <div class="count">4</div>
                         <div class="change" rel="2">
-                            <div class="plus">+</div>|<div class="minus">-</div>
+                            <span class="plus">+</div>|<span class="minus">-</div>
                         </div>
                     </div>
                     <div class="price">
@@ -49,6 +49,7 @@
                     </div>
                 </li>
             </ul>
+            <div id="total"><span class="total"></span></div>
         </div>
     </section>
 </body>
